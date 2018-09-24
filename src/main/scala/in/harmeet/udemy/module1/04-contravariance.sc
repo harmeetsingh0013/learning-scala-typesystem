@@ -88,3 +88,5 @@ class Publisher[-T] {
 
 new Publisher[IronMan].publishComic(new IronMan(1, "Tales of Suspense"))
 //new Publisher[IronMan].publishComic(new Season(1, "Tales of Suspense"))
+
+// The problem with contra-variance will discuss next examples
