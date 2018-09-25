@@ -23,16 +23,15 @@ val teams1: FightClub[SuperHero] = FightClub(BatMan("JusticeLeague"), Hulk("Aven
 // So, they create a game where you can select your hero and
 // Pass any opponent super hero for fight
 
-case class GameFight[+F <: SuperHero](player: F) {
+/*case class GameFight[+F <: SuperHero](player: F) {
     override def toString : String =
         s"${player} Ready ... "
 
 //    def fight(opponent: F) = FightClub(player, opponent)
-}
+}*/
 
 // For solving these types of problems Scala type system provide us a way
 
-/*
 case class GameFight[+F <: SuperHero](player: F) {
     override def toString : String =
         s"${player} Ready ... "
@@ -40,5 +39,10 @@ case class GameFight[+F <: SuperHero](player: F) {
     def fight[M >: F <: SuperHero](opponent: M) = FightClub(player, opponent)
 }
 
-val game1: FightClub[SuperHero] =
-    GameFight(DrStrange("Avengers")).fight(BatMan("JusticeLeague"))*/
+val game1 =
+    GameFight(DrStrange("Avengers"))
+        .fight[SuperHero](BatMan("JusticeLeague"))
+
+val game2 =
+    GameFight(DrStrange("Avengers"))
+        .fight[Marvel](Hulk("Avengers"))
