@@ -32,7 +32,6 @@ jlTower.helpMe
 avTower.helpMe
 
 // Solution with generics
-
 case class Tower2[T](superHero: T) {
     override def toString : String = s"This is the ${superHero} tower"
     def helpMe = superHero

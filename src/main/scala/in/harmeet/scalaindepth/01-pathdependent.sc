@@ -56,8 +56,9 @@ class AnotherClass(o: Outer) {
 
     def bar(inner: Outer#Inner) = null
 
-    foo(o.y)
+    def callingFoo = foo(o.y)
 }
 
+new AnotherClass(x).callingFoo
 //new AnotherClass(x).foo(x.y)
 //new AnotherClass(x).bar(x.y)

@@ -48,9 +48,9 @@ case class City[+T](name: String, superHero: T) {
 
 def dialHeroCode2(code: Int): City[SuperHero] = code match {
     case 131 => City("Gotham", BatMan("JusticeLeague"))
-    case 132 => City("", Flash("JusticeLeague"))
-    case 133 => City("", Hulk("Avengers"))
-    case 134 => City("", DrStrange("Avengers"))
+    case 132 => City("Central City", Flash("JusticeLeague"))
+    case 133 => City("New Mexico", Hulk("Avengers"))
+    case 134 => City("New York City", DrStrange("Avengers"))
 }
 
 val hero21 = dialHeroCode2(131).superHero

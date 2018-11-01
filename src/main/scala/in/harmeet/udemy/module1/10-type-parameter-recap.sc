@@ -20,7 +20,7 @@ val hulk = Tower(Hulk("Avengers"))
 batMan.teamName
 hulk.teamName
 
-// What is we trying to access type directly like
+// What if, we trying to access type directly like
 
 //batMan.F
 //hulk.F

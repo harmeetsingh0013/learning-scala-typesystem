@@ -1,7 +1,7 @@
 // Example 01, 02
 
 // Following are the points why we require upper bounds
-// -- If we need to access some generic property of the type
+// -- If we need to access some common property from the type hierarchy
 // -- Without lower bound we are not able to restrict with specific type hierarchy
 
 abstract class SuperHero { val team: String }

@@ -1,4 +1,4 @@
-import com.sun.javafx.css.converters.EffectConverter.DropShadowConverter
+
 
 abstract class SuperHero { val team: String }
 
@@ -39,10 +39,10 @@ case class GameFight[+F <: SuperHero](player: F) {
     def fight[M >: F <: SuperHero](opponent: M) = FightClub(player, opponent)
 }
 
-val game1 =
+val game1 : FightClub[SuperHero] =
     GameFight(DrStrange("Avengers"))
         .fight[SuperHero](BatMan("JusticeLeague"))
 
-val game2 =
+val game2 : FightClub[Marvel] =
     GameFight(DrStrange("Avengers"))
         .fight[Marvel](Hulk("Avengers"))
